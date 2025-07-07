@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Paired T-Test Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Paired-Sample T-Test: A Step-by-Step Educational Walkthrough</h1>
+            <p>This tool replicates the detailed, step-by-step output of a paired t-test for educational purposes. Upload an Excel file to begin.</p>
+        </header>
+
+        <section class="controls">
+            <div class="input-group">
+                <label for="excelFile">1. Upload your data (Excel file):</label>
+                <input type="file" id="excelFile" accept=".xlsx, .xls">
+            </div>
+            <div class="input-group">
+                <label for="ivName">2. Enter Independent Variable (IV) name:</label>
+                <input type="text" id="ivName" placeholder="e.g., Teaching Method">
+            </div>
+            <div class="input-group">
+                <label for="dvName">3. Enter Dependent Variable (DV) name:</label>
+                <input type="text" id="dvName" placeholder="e.g., Test Score">
+            </div>
+            <button id="runButton">Run Analysis</button>
+        </section>
+
+        <section id="results" class="results-container"></section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
+    
+    <script src="app.js"></script>
+</body>
+</html>
